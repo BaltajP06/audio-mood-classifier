@@ -1,50 +1,67 @@
+Disclaimer:
+This project was built for educational and portfolio purposes. Mood prediction is inherently subjective and model performance depends heavily on the quality and diversity of the training data.
+
+
 # Audio Mood Classifier
 
-A command-line tool that uses GPT-4 to analyze any song and return structured broadcast intelligence — mood, energy, genre, optimal airtime, radio suitability, and listener profile.
+A machine learning project that predicts the mood of an audio clip based on its acoustic characteristics.
 
-Built this because I wanted to understand how media companies could automate content classification at scale. Radio programmers manually categorize thousands of tracks — this does it in seconds.
+The goal of this project was to explore how audio features can be transformed into meaningful predictions using machine learning. By analyzing properties such as tempo, energy, and frequency-related features, the model attempts to classify audio into different mood categories.
 
-## What it returns
+## Why I Built This
 
-    MOOD:         Euphoric
-    ENERGY:       9/10
-    GENRE:        Synth-pop / R&B
-    TEMPO:        Fast
-    BEST AIRTIME: Morning drive
-    LISTENER:     Urban professionals aged 22-35 who work out and commute
-    RADIO FIT:    High
-    SUMMARY:      A relentless, nostalgic rush built for peak-hour rotation
+Music and audio contain patterns that humans naturally associate with emotions and moods. I wanted to better understand the machine learning workflow behind audio classification and gain hands-on experience with feature extraction, model training, and evaluation.
 
-## Stack
+This project served as an opportunity to combine Python, data science, and machine learning in a real-world problem domain.
 
-- Python 3
-- OpenAI GPT-4
-- python-dotenv
+## Features
 
-## Setup
+- Audio file processing
+- Feature extraction from audio signals
+- Machine learning-based mood prediction
+- Model evaluation and performance metrics
+- Data preprocessing pipeline
+- Reproducible training workflow
 
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+## Tech Stack
 
-Add your OpenAI key to a .env file then run:
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Librosa
+- Matplotlib
 
-    python3 app.py
+## Project Workflow
 
-## Why structured output matters
+1. Load and preprocess audio files
+2. Extract relevant audio features
+3. Prepare training and testing datasets
+4. Train machine learning models
+5. Evaluate model performance
+6. Generate mood predictions
 
-Free-form AI responses are hard to use downstream. This tool returns consistent labeled fields every time which means you could pipe the output into a database, a spreadsheet, or a larger scheduling pipeline without parsing unpredictable text.
+## What I Learned
 
-## Real use cases
+Through this project I gained experience with:
 
-- Radio station content scheduling automation
-- Streaming playlist mood matching
-- Podcast and music catalog tagging at scale
-- Broadcast programming intelligence
+- Audio signal processing
+- Feature engineering
+- Machine learning model development
+- Dataset preparation
+- Model evaluation techniques
+- Python data science workflows
 
-## What I would add next
+## Future Improvements
 
-- Spotify API integration to pull real audio features like tempo, valence, and danceability
-- SQLite caching so the same song does not hit the API twice
-- Streamlit UI so non-technical users can run it without the terminal
-- Batch mode where you pass a CSV of songs and get back a fully classified CSV
+- Deep learning models
+- Larger datasets
+- Real-time audio classification
+- Interactive web interface
+- Expanded mood categories
+
+## Running Locally
+
+```bash
+pip install -r requirements.txt
+python app.py
